@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,500;0,700;1,300&display=swap");
+    body {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      background-color: black;
+    }
+    h1 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: px;
+      font-family: "Montserrat";
+    }
+
+    p {
+      color: hsla(0, 0%, 100%, 0.75);
+      margin-bottom: 70px;
+    }
+
+    a {
+      background-color: hsl(0, 0%, 95%);
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 10px;
+      font-weight: 700;
+      border-radius: 20px;
+    }
+    .container {
+      width: 70%;
+      height: 500px;
+      background-color: rgb(243, 243, 243);
+      border-radius: 5px;
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+
+    .all {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      width: 70%;
+      height: 70%;
+      margin: auto;
+      padding-top: 70px;
+      color: white;
+    }
+
+    .one {
+      background-color: hsl(31, 77%, 52%);
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    .two {
+      background-color: hsl(184, 100%, 22%);
+    }
+    .three {
+      background-color: hsl(179, 100%, 13%);
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    .items {
+      margin: 0 20px;
+      margin-top: 30px;
+    }
+
+    .a {
+      color: orange;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="all">
+        <div class="one">
+          <div class="items">
+            <img src="icon-sedans.svg" alt="logo" />
+            <h1>sedans</h1>
+            <p>
+              Choose a sedom fot its affordability and excellent fuel economy.
+              Ideal for cruising in the city or on your next road trip.
+            </p>
+            <a href="#" class="a">Learn More</a>
+          </div>
+        </div>
+        <div class="two">
+          <div class="items">
+            <img src="icon-suvs.svg" alt="logo" />
+            <h1>suvs</h1>
+            <p>
+              Take a SUV fot its spacious interior, power, and versality.
+              Perfect for your next family vacation and off-road adventures.
+            </p>
+            <a href="#" class="b">Learn More</a>
+          </div>
+        </div>
+        <div class="three">
+          <div class="items">
+            <img src="icon-luxury.svg" alt="logo" />
+            <h1>luxury</h1>
+            <p>
+              Cruise in the best car brands without the bloated prices. Enjoy
+              the enhanced comfort of a luxury rental and arrive in style.
+            </p>
+            <a href="#" class="c">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,500;0,700;1,300&display=swap");
+    body {
+      background: black;
+
+      padding: 0;
+      margin: 0;
+      font-family: "Montserrat";
+      box-sizing: border-box;
+    }
+
+    img {
+      position: absolute;
+      top: 17px;
+      right: 15px;
+    }
+    #container {
+      width: 600px;
+      min-width: 537px;
+      height: 430px;
+      flex-direction: row;
+      background: url(bg-intro-desktop.png);
+      background-color: rgb(219, 33, 33);
+      background-size: cover;
+      background-position: no-repeat;
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      width: 500px;
+      margin: 0 auto;
+      padding-top: 50px;
+    }
+
+    .content > div {
+      flex: 1;
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      color: white;
+      padding-right: 10px;
+    }
+
+    .left h1 {
+      font-family: Tahoma;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .left p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: rgb(233, 233, 233);
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .right .upper {
+      background-color: hsl(248, 32%, 49%);
+      padding: 0px 15px;
+      font-size: 10px;
+      text-align: center;
+      color: white;
+      border-radius: 5px;
+      box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.4);
+    }
+
+    .right .upper span {
+      color: rgb(173, 173, 173);
+    }
+
+    .below {
+      position: relative;
+      width: 100%;
+      background-color: white;
+      margin-top: 10px;
+      border-radius: 5px;
+      box-shadow: 0px 3px 0px 1px rgba(0, 0, 0, 0.4);
+    }
+
+    .below .text {
+      position: relative;
+      border: 1px solid #ddd;
+      width: 80%;
+      margin-left: 15px;
+      padding: 10px 10px;
+      margin-top: 12px;
+      font-size: 10px;
+      font-weight: 700;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    .below .text:focus {
+      border: 1px solid hsl(248, 32%, 70%);
+    }
+
+    /* Style the form icons */
+    input[type="text"]:active,
+    input[type="email"]:active,
+    input[type="password"]:active {
+      background-image: url(icon-error.svg);
+      margin-bottom: 10px;
+      background-position: 180px 3px;
+      background-repeat: no-repeat;
+    }
+
+    .submit {
+      width: 90%;
+      height: 30px;
+      color: white;
+      background-color: rgb(0, 223, 115);
+      margin-top: 12px;
+      margin-left: 15px;
+      border: 1px solid rgb(0, 65, 34);
+      border-radius: 5px;
+      font-size: 10px;
+      cursor: pointer;
+    }
+
+    .footer {
+      color: rgb(173, 173, 173);
+      text-align: center;
+      font-size: 7px;
+    }
+
+    .footer a {
+      color: red;
+      text-decoration: none;
+    }
+
+    @media only screen and (max-width: 375px) {
+      body {
+        background-color: rgb(255, 153, 153);
+        height: 100%;
+        width: 100%;
+      }
+
+      #container {
+        background: url(bg-mobile.png);
+        width: 10%;
+        height: auto;
+        background-repeat: no-repeat;
+        margin-top: 0;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 0;
+      }
+
+      .left {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: white;
+        padding: 0;
+      }
+
+      .left h1 {
+        font-family: "Monserat";
+        font-size: 2.5rem;
+        font-weight: 800;
+      }
+
+      .left p {
+        margin: 0;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        color: rgb(233, 233, 233);
+      }
+
+      .right {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+      }
+
+      .right .upper {
+        background-color: hsl(248, 32%, 49%);
+        padding: 0;
+        font-size: 25px;
+        padding: 5px 25px;
+        line-height: 2rem;
+
+        color: white;
+        border-radius: 10px;
+        box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.4);
+      }
+
+      .below {
+        position: relative;
+        background-color: white;
+        margin-top: 25px;
+        border-radius: 10px;
+        box-shadow: 0px 3px 0px 1px rgba(0, 0, 0, 0.4);
+      }
+
+      .below .text {
+        position: relative;
+        border: 1px solid #ddd;
+        margin: 0 25px;
+        padding: 15px 15px;
+        margin-top: 20px;
+        font-size: 20px;
+      }
+
+      input[type="text"]:active,
+      input[type="email"]:active,
+      input[type="password"]:active {
+        background-image: none;
+      }
+      .submit {
+        color: white;
+        height: 60px;
+        background-color: rgb(0, 223, 115);
+        margin-top: 15px 0px 0px 17px;
+        border: 1px solid rgb(0, 65, 34);
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .footer {
+        width: 80%;
+        font-size: 20px;
+        padding-left: 40px;
+        margin-bottom: 0;
+      }
+    }
+  </style>
+  <body>
+    <div id="container">
+      <div class="content">
+        <div class="left">
+          <h1>Learn to code by watching others</h1>
+          <p>
+            see how experienceed developers solve problems in real-time watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
+        </div>
+        <div class="right">
+          <div class="upper">
+            <p>Try it free 7 days <span>then $20/ma. thereafter</span></p>
+          </div>
+          <div class="below">
+            <form action="">
+              <input
+                type="text"
+                class="text"
+                placeholder="First Name"
+                data-error="first Name cannot be empty"
+              /><br />
+
+              <input
+                type="text"
+                class="text"
+                placeholder="Last Name"
+                data-error="Last Name cannot be empty"
+              /><br />
+
+              <input
+                type="email"
+                class="text"
+                placeholder="Email Address"
+              /><br />
+              <input
+                type="password"
+                class="text"
+                placeholder="password"
+              /><br />
+
+              <button class="submit">CLAIM YOUR FREE TRIAL</button>
+              <p class="footer">
+                By clicking the button you are agreeing to our
+                <a href="#">Terms and Services</a>
+              </p>
+            </form>
+
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
